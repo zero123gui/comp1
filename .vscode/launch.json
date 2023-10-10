@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/guimi/OneDrive/Documentos/Faculdade/Computacao1/lista4",
-      "program": "c:/Users/guimi/OneDrive/Documentos/Faculdade/Computacao1/lista4/build/Debug/outDebug",
+      "cwd": "c:/Users/guimi/OneDrive/Documentos/Faculdade/Computacao1/pratica1",
+      "program": "c:/Users/guimi/OneDrive/Documentos/Faculdade/Computacao1/pratica1/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
