@@ -1,9 +1,7 @@
 #include <stdio.h>
 
 void verificaAno(int ano){
-    if(ano%400 == 0){
-        printf("Ano bissexto\n");
-    }else if(ano%4 == 0 && ano%100 != 0){
+    if(ano%400 == 0 || (ano%4 == 0 && ano%100 != 0)){
         printf("Ano bissexto\n");
     }else printf("Nao eh bissexto\n");
 }
