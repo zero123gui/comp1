@@ -6,9 +6,9 @@ void verificaTriangulo(int a, int b, int c){
         if(b>abs(a-c) && b<(a+c)){
             if(c>abs(a-b) && c<(a+b)){
                 printf("Ele vive\n"); 
-            }
-        }
-    }
+            }else printf("Area: %d\n", ((a+b)*c)/2);
+        }printf("Area: %d\n", ((a+b)*c)/2);
+    }printf("Area: %d\n", ((a+b)*c)/2);
     
 }
 
