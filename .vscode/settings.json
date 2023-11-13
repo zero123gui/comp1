@@ -59,6 +59,7 @@
   "files.associations": {
     "math.h": "c",
     "EX3.C": "cpp",
-    "stdlib.h": "c"
+    "stdlib.h": "c",
+    "stdio.h": "c"
   }
 }
