@@ -13,9 +13,7 @@ void funcao1(){
                 printf("i=%d j=%d\n",i,j);
             }
         }   
-    }
-    
-    
+    }   
 }
 
 int main(){
