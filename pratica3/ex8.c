@@ -6,10 +6,6 @@ void funcao1(){
         for (j=i+6; j >= i+4; j--){
             if (i%2){
                 printf("i=%d j=%d\n",i,j);
-                j--;
-                printf("i=%d j=%d\n",i,j);
-                j--;
-                printf("i=%d j=%d\n",i,j);
             }
         }
                
