@@ -42,13 +42,13 @@ int defineResultado(){
         }else resultado = 2;//computador ganhou retorna 2    
     }else if(usuario == 3){//o usuario escolheu espada 
         int espadaUser = defineEspada();
-        printf("Espada do usuario: %d",espadaUser);
+        printf("Espada do usuario: %d\n",espadaUser);
         if(espadaUser==1){
             resultado = 1;//user ganhou retorna 1
         }else resultado = 2;//comp ganhou 
     }else if(computador == 3){
         int espadaComp = defineEspada();
-        printf("Espada do Computador: %d", espadaComp);
+        printf("Espada do Computador: %d\n", espadaComp);
         if(espadaComp == 1){
             resultado = 2;//comp ganhou
         }else return 1;//user ganhou
@@ -77,7 +77,7 @@ int main(){
         }else if(resultado == 2){
             scorePC+=1;
             printf("Computador ganhou\n");
-        }
+        }else printf("Empate\n");
     }
     if(scoreUser==3){
         printf("O jogador ganhou\nPlacar = %dx%d\n", scoreUser, scorePC);
