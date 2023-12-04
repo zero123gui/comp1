@@ -10,7 +10,14 @@ void aposentadoria(int idade, int servico){
     }else printf("Nao pode aposentar\n");
 }
 
-
+void bissexto(int anoinicio, int anofinal){
+    while (anoinicio<anofinal){
+        if ((anoinicio%4==0 && anoinicio%100!=0) || anoinicio%400==0){
+            printf("O ano %d eh bissexto\n", anoinicio);
+        }else printf("O ano %d naum eh bissexto\n", anoinicio);
+        anoinicio++;
+    }
+}
 
 int main(){
     int idade, servico, anoinicio, anofinal, op;
@@ -30,6 +37,7 @@ int main(){
             case 2://intervalo
                 printf("Digite o ano de inicio e o ano final\n");
                 scanf("%d %d", &anoinicio, &anofinal);
+                bissexto(anoinicio,anofinal);
                 break;
         }
     } while (op!=0);
