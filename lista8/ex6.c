@@ -28,14 +28,9 @@ void imprimeMatriz(int A[][4]){
             if (i+j==4-1)
             {
                 printf("%d ", A[i][j]);
-            }
-            
-        }
-        
+            }   
+        }   
     }
-    
-    
-    
 }
 
 int main(){
