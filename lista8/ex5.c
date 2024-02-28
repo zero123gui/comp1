@@ -22,7 +22,9 @@ void inverteMatriz(int mat1[][3]){
 }
 
 int main(){
-    int A[3][3] = {{10,11,12},{13,14,15},{16,17,18}};
+    int A[3][3] = {{10,11,12},
+                   {13,14,15},
+                   {16,17,18}};
     inverteMatriz(A);
     return 0;
 }
