@@ -1,14 +1,17 @@
 #include <stdio.h>
-#define MAX 10
+#include <stdlib.h>
+#include <string.h>
+#define MAX 30
 
 int main(){
     char produtos[MAX][MAX];
     int quantidade;
     printf("Digite quantos produtos deseja adicionar\n");
-    scanf("%d", &quantidade);
+    scanf("%d ", &quantidade);
     for (int i = 0; i < quantidade; i++)
     {
-        scanf("%s",produtos[i]);
+        fgets(produtos[i],MAX,stdin);
+        strtok(produtos[i],"\n");
     }
     printf("Lista de produtos\n");
     for (int i = 0; i < quantidade; i++)
