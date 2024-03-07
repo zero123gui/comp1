@@ -16,7 +16,7 @@ int main(){
     {
         printf("Digite a o nome e a idade\n");
         scanf("%s %d", nomes[i], &idades[i]);
-        printf("Digite 1 para continuar\n");
+        printf("Digite 1 para continuar e 0 para parar\n");
         scanf("%d", &op);
         i++;
     } while (op==1);
