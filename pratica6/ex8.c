@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 void verificaPalindromo(char z[], int tam){
     int i,j,flag=1;
     for ( i = 0, j = tam-1; i < j; i++, j--)
     {
-        if (z[i]!=z[j])
+        if (tolower(z[i]) != tolower(z[j]))
         {
             flag = 0;
             break;
