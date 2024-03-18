@@ -29,16 +29,17 @@ int main(){
             impar[k] = x;
             k++;
         }
-        if (j==5 || i==14)
-        {
-            imprimePar(par, j);
-            j=0;
-        }
         if (k==5 || i==14)
         {
             imprimeImpar(impar, k);
             k=0;
         }
+        if (j==5 || i==14)
+        {
+            imprimePar(par, j);
+            j=0;
+        }
+        
         
         
     }
