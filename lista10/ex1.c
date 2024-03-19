@@ -31,7 +31,7 @@ int main(){
     for (i = 0; i < qnt; i++)
     {
         printf("Digite o nome do aluno: ");
-        scanf("%s%*c",alunos[i].nome);//%[^\n]%*c
+        scanf("%*c%[^\n]%*c",alunos[i].nome);//%[^\n]%*c
         printf("\nDigite o sexo do aluno: ");
         scanf("%c%*c", &alunos[i].sexo);
         printf("\nDigite a matricula do aluno: ");
