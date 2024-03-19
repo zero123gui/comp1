@@ -23,7 +23,7 @@ void imprimeCadastro(struct Cadastro evento[], int qntd){
 
 int main(){
     Cadastro evento[10];
-    int i, j, qntd;
+    int i, j, qntd, day=0;
     float precomaior = 0, precomenor;
     char nomemaior[15], nomemenor[15];
     printf("Digite a quantidade de eventos\n");
@@ -35,6 +35,7 @@ int main(){
         scanf("%*c%[^\n]%*c", evento[i].nome);//%s%*c
         printf("\nDigite o preco: ");
         scanf("%f", &evento[i].preco);
+
         if (evento[i].preco > precomaior)
         {
             precomaior = evento[i].preco;
