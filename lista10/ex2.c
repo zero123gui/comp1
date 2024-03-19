@@ -32,6 +32,10 @@ int main(){
         {
             printf("\nDigite o dia do evento: \n");
             scanf("%d", &evento[i].dia[j]);
+            while (evento[i].dia[j]<1||evento[i].dia[j]>31)
+            {
+                scanf("%d", &evento[i].dia[j]);
+            }
         }
     }
     imprimeCadastro(evento);
