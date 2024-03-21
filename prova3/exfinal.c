@@ -6,7 +6,7 @@ void contaLetras(char palavra[]){
     int tamanho = 0;
         for (int i = 0; palavra[i] != '\0'; i++)
         {
-            if (palavra[i] != ' ')
+            if (palavra[i] != ' ' || palavra[i] != '-')
             {
                 tamanho++;
             }
@@ -35,7 +35,7 @@ void contaPalavra(char palavra[]){
     int palavras = 0;
     for (int i = 0; palavra[i] != '\0'; i++)
     {
-        if (palavra[i] == ' ')
+        if (palavra[i] == ' ' || palavra[i] == '-')
         {
             palavras++;
         }
