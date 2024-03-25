@@ -12,7 +12,7 @@ void imprimirMatrizCebola(int N) {
             matriz[i][j] = valor;//linha de cima
             matriz[N - i - 1][j] = valor;// linha de baixo
             matriz[j][i] = valor;//linha da esquerda
-            matriz[j][N - i - 1] = 7;
+            matriz[j][N - i - 1] = valor;
         }
         valor++;
     }
