@@ -1,5 +1,5 @@
-#ifndef VETOR_H_INCLUDED
-#define VETOR_H_INCLUDED
+#ifndef HELLO_H
+#define HELLO_H
 #include <stdio.h>
 
 void hello(char nome[]);
