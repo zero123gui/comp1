@@ -16,6 +16,7 @@ int main(){
         }    
     }
     printf("%d", espacos);
+    fclose(fr);
     
     return 0;
 }
