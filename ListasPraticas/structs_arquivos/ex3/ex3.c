@@ -7,19 +7,23 @@ typedef struct Pessoa
     int idade;
 }Pessoa;
 
+Pessoa pessoa[5];
+
+void cadastraPessoa(int i){
+
+    printf("Digite o nome: ");
+    scanf("%[^\n]%*c", pessoa[i].nome);
+    printf("\nDigite o genero: ");
+    scanf(" %c", &pessoa[i].genero);
+    printf("\nDigite a idade: ");
+    scanf("%d", &pessoa[i].idade);
+}
 
 int main(){
     FILE *maior, *menor;
-    Pessoa pessoa[5];
     int op=1, i=0;
     while (op){
-        printf("Digite o nome: ");
-        scanf("%[^\n]%*c", pessoa[i].nome);
-        printf("\nDigite o genero: ");
-        scanf(" %c", &pessoa[i].genero);
-        printf("\nDigite a idade: ");
-        scanf("%d", &pessoa[i].idade);
-
+        cadastraPessoa(i);
         printf("Quer continuar 1/0\n");
         scanf("%d%*c", &op);
         i++;

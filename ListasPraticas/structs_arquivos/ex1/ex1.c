@@ -1,13 +1,12 @@
 #include <stdio.h>
 
-int main(){
+void leCPF(){
     FILE *fr;
     int cpf[11];
 
-    fr = fopen("entrada.txt","r");
-    if (fr==NULL){
-        printf("Entrada invalida de arquivo");
-        return 1;
+    fr = fopen("entrada.txt", "r");
+    if(!fr){
+        printf("Erro no arquivo");
     }
 
     for (int i = 0; i < 11; i++){
@@ -27,10 +26,14 @@ int main(){
         {
             printf("\n");
         }
-        
     }    
     
     fclose(fr);
+    
+}
+
+int main(){
+    leCPF();
 
     return 0;
 }
