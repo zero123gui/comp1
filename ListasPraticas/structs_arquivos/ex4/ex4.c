@@ -7,10 +7,8 @@ typedef struct Pessoa
     int idade;
 }Pessoa;
 
-Pessoa pessoa[5];
 
-
-void cadastrarPessoa(int i){
+void cadastrarPessoa(Pessoa pessoa[], int i){
     printf("Digite o nome: ");
     scanf("%s", pessoa[i].nome);
     printf("\nDigite o genero: ");
@@ -19,7 +17,7 @@ void cadastrarPessoa(int i){
     scanf("%d", &pessoa[i].idade);
 }
 
-void imprimirMaiores(int i){
+void imprimirMaiores(Pessoa pessoa[],int i){
     for (int j = 0; j < i; j++){
         if (pessoa[j].idade >= 18){
             printf("%s;%c;%d\n", pessoa[j].nome, pessoa[j].genero, pessoa[j].idade);
@@ -27,7 +25,7 @@ void imprimirMaiores(int i){
     }
 }
 
-void imprimirMenores(int i){
+void imprimirMenores(Pessoa pessoa[], int i){
     for (int j = 0; j < i; j++){
         if (pessoa[j].idade < 18){
             printf("%s;%c;%d\n", pessoa[j].nome, pessoa[j].genero, pessoa[j].idade);
@@ -35,8 +33,13 @@ void imprimirMenores(int i){
     }
 }
 
+void salvaArquivo(FILE *arq, int j, Pessoa pessoa[]){
+    fprintf(arq, "%s;%c;%d\n", pessoa[j].nome, pessoa[j].genero, pessoa[j].idade);
+}
+
 int main(){
     FILE *maior, *menor;
+    Pessoa pessoa[5];
     int op, i=0;
 
     maior = fopen("maioridade.txt","w");
@@ -57,20 +60,20 @@ int main(){
         switch (op)
         {
         case 1:
-            cadastrarPessoa(i);
+            cadastrarPessoa(pessoa,i);
             i++;
             break;
         case 2:
             if (i==0){
                 printf("Sem alunos cadastrados\n");
                 return 1;
-            } else imprimirMaiores(i);            
+            } else imprimirMaiores(pessoa,i);            
             break;
         case 3:
             if (i==0){
                 printf("Sem alunos cadastrados\n");
                 return 1;
-            } else imprimirMenores(i);
+            } else imprimirMenores(pessoa,i);
             break;
         
         default:
@@ -81,9 +84,9 @@ int main(){
     for (int j = 0; j < i; j++)
     {
         if (pessoa[j].idade >= 18){
-            fprintf(maior, "%s;%c;%d\n", pessoa[j].nome, pessoa[j].genero, pessoa[j].idade);
+            salvaArquivo(maior,j,pessoa);
         } else if (pessoa[j].idade < 18){
-            fprintf(menor, "%s;%c;%d\n", pessoa[j].nome, pessoa[j].genero, pessoa[j].idade);
+            salvaArquivo(menor,j,pessoa);
         }
     }
 
