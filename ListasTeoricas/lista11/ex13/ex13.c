@@ -22,6 +22,10 @@ int contaPalavras(FILE *arq){
     return contador;
 }
 
+void salvaArquivo(FILE *arquivo, int palavras){
+    fprintf(arquivo,"/nQuantidade de palavras: %d",palavras);
+}
+
 int main(){
     FILE *fa;
     int contador;
@@ -35,6 +39,8 @@ int main(){
     contador = contaPalavras(fa);
     printf("Palavras: %d",contador);
 
+    salvaArquivo(fa, contador);
+    
     fclose(fa);
 
     return 0;
