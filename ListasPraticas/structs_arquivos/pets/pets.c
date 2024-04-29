@@ -46,6 +46,34 @@ void separaSexo(FILE *f1, FILE *f2, Pets pets[], int qnt){
     rewind(f2);
 }
 
+void imprimeGrupos(Pets pets[], int qnt){
+
+    int gp1=0, gp2=0, gp3=0, gp4=0;
+    for (int i = 0; i < qnt; i++)
+    {
+        if (pets[i].tipo == 1 && pets[i].sexo == 'm')
+        {
+            printf("Tipo: %d, Sexo: %c, Nome: %s\n", pets[i].tipo, pets[i].sexo, pets[i].nome);
+            gp1++;
+        } else if (pets[i].tipo == 2 && pets[i].sexo == 'm')
+        {
+            printf("Tipo: %d, Sexo: %c, Nome: %s\n", pets[i].tipo, pets[i].sexo, pets[i].nome);
+            gp2++;
+        } else if (pets[i].tipo == 1 && pets[i].sexo == 'f')
+        {
+            printf("Tipo: %d, Sexo: %c, Nome: %s\n", pets[i].tipo, pets[i].sexo, pets[i].nome);
+            gp3++;
+        } else if (pets[i].tipo == 2 && pets[i].sexo == 'f')
+        {
+            printf("Tipo: %d, Sexo: %c, Nome: %s\n", pets[i].tipo, pets[i].sexo, pets[i].nome);
+            gp4++;
+        }
+    }
+    printf("Cao e macho: %d\n",gp1);
+    printf("Gato e macho: %d\n",gp2);
+    printf("Cao e femea: %d\n",gp3);
+    printf("Gato e femea: %d\n",gp4);
+}
 
 int main(){
     FILE *fr,*f1,*f2;
@@ -65,6 +93,8 @@ int main(){
     cadastraPets(fr, pets, quantidade);
 
     separaSexo(f1, f2, pets, quantidade);
+
+    imprimeGrupos(pets, quantidade);
 
     fclose(fr);
     fclose(f1);
