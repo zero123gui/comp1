@@ -12,10 +12,16 @@ int main(){
     scanf("%d", &k);
 
     a = (int**) malloc(n * sizeof(int*));
+    if(a == NULL){
+        printf("Memoria insuficiente\n");
+        exit(1);
+    }
+
     for (int i = 0; i < n; i++){
-        *(a+i) = (int*) malloc(m*sizeof(int));
-        if ( *(a+i)==NULL)
+        a[i] = (int*) malloc(m * sizeof(int));
+        if ( a[i]==NULL)
         {
+            printf("Memoria insuficiente\n");
             exit(1);
         }
     }
@@ -31,8 +37,11 @@ int main(){
         printf("\n");
     }
     
-    free(a);
-    a==NULL;
+    //Liberando espaço de cada vetor-linha:
+    for(int i=0; i<=n-1; i++){
+        free(a[i]);
+        a[i] = NULL;
+    }
 
     return 0;
 }
