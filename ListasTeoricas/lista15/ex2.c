@@ -57,6 +57,14 @@ void copiaMatriz(char **A, char **B, int n){
     }
 }
 
+void imprimeMatriz(char **B, int n){
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("%s\n", B[i]);
+    }
+}
+
 void liberaMemoria(char **M, int n){
     int i;
     for(i=0; i<n; i++){
@@ -84,13 +92,12 @@ int main(){
     B = alocaMatriz(maior, maior);
 
     copiaMatriz(A,B,n);
-
-    for (int i = 0; i < n; i++)
-    {
-        printf("%s\n", B[i]);
-    }
     
     liberaMemoria(A,n);
+    
+    imprimeMatriz(B,n);
+
+    liberaMemoria(B,n);
 
     return 0;
 }
