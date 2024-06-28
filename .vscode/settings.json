@@ -60,6 +60,7 @@
     "math.h": "c",
     "EX3.C": "cpp",
     "stdlib.h": "c",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "typeinfo": "cpp"
   }
 }
